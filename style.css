@@ -335,9 +335,9 @@ position: static;
     z-index: 1;
 }
 
-@media (max-width: 844px) { 
+@media (max-width: 700px) { 
     #header {
-        margin-top: 70vh; 
+        margin-top: 95vh; 
     }
     
 }
