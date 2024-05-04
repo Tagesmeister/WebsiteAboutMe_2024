@@ -335,20 +335,20 @@ position: static;
     z-index: 1;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 844px) { 
     #header {
         margin-top: 70vh; 
     }
     
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 844px) { 
     #container-project {
         flex-direction: column; 
     }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 844px) { 
     .item-project {
         width: 90vw; 
         font-size: clamp(14px, 4vw, 16px); 
