@@ -9,6 +9,7 @@ body {
     background-color: #1e1f26;
 }
 
+/*Home*/
 .nav,
 .slider {
     display: flex;
@@ -74,6 +75,7 @@ a {
     height: 75px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     z-index: 1;
+    
 
 }
 
@@ -236,20 +238,101 @@ a {
     -webkit-animation-delay: 2.1s;
     animation-delay: 2.1s;
 }
+
 /*About Me*/
 #container-aboutme {
     display: flex;
-    flex-direction:row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px;
+    width: 100%; 
 }
+
 .item-aboutme {
-   background-color: pink;
-    height: 300px;
-    width: 500px;
-    border-radius: 50px;
-    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-    margin-left: 40px;
-    
+    background-color: #2c2d34; 
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    width: 55%; 
+    flex: none; 
+}
+
+.item-aboutme:hover {
+    transform: translateY(-10px);
+}
+
+.divTitle {
+    font-size: 1.5rem;
+    color: #ff0266;
+    margin-bottom: 20px; 
+    width: 100%; 
+}
+
+.divText p {
+    line-height: 1.6; 
+    text-align: justify;
+}
+
+@media (max-width: 768px) {  
+    body {
+        font-size: 14px; 
+    }
+
+    .nav h1, .slider h1 {
+        font-size: 5vw;  
+    }
+
+    #container-aboutme, .item-aboutme {
+        padding: 20px;  
+        margin: 20px 10px; 
+    }
+
+    .divTitle {
+        font-size: 1.2rem;  
+    }
+
+    .divText p {
+        font-size: 1rem; 
+        line-height: 1.5; 
+    }
+
+    .nav-tab {
+        font-size: 4vw; 
+        padding: 15px 0; 
+    }
+}
+
+@media (max-width: 480px) { 
+    body {
+        font-size: 16px; 
+    }
+
+    .nav h1, .slider h1 {
+        font-size: 7vw;  
+    }
+
+    .item-aboutme {
+        padding: 15px;  
+        margin: 10px 5px;  
+    }
+
+    .divTitle {
+        font-size: 1.5rem; 
+    }
+
+    .divText p {
+        font-size: 1.1rem; 
+        line-height: 1.6; 
+    }
+
+    .nav-tab {
+        font-size: 5vw; 
+        padding: 20px 0; 
+    }
 }
 
 
@@ -259,15 +342,15 @@ a {
 #container-project {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Updated for even spacing */
+    justify-content: space-between;
     padding: 20px;
 }
 
 .item-project {
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: clamp(12px, 2vw, 18px); /* Anpassung für bessere Lesbarkeit */
-    max-width: 220px; /* Erlaubt eine volle Breite bis zu 250px */
+    font-size: clamp(12px, 2vw, 18px); 
+    max-width: 220px; 
     min-height: 250px;
     border-radius: 20px;
     position: relative;
@@ -275,8 +358,8 @@ a {
     padding: 0;
     background: #1e1f26;
     margin: 10px;
-    width: clamp(150px, 45vw, 250px); /* Anpassung der Breite für bessere Reaktion */
-    height: auto; /* Ermöglicht es der Höhe, sich an den Inhalt anzupassen */
+    width: clamp(150px, 45vw, 250px); 
+    height: auto;
 }
 
 
@@ -288,10 +371,10 @@ a {
 
 .images {
     width: 100%;
-    height: 100%; /* Sorgt dafür, dass das Bild die gesamte Höhe des Eltern-Divs einnimmt */
-    object-fit: cover; /* Stellt sicher, dass das Bild den Container vollständig bedeckt, ohne das Seitenverhältnis zu verzerren */
+    height: 100%;
+    object-fit: cover; 
     padding: 30px;
-    display: block; /* Entfernt den Standard-Inline-Leerraum unter dem Bild */
+    display: block; 
 
     
     
@@ -309,12 +392,12 @@ a {
     justify-content: center;
     font-size: 24px;
     transition: top 0.5s ease;
-    opacity: 0; /* Initially set to transparent */
+    opacity: 0; 
 }
 
 .item-project:hover .overlay {
-    top: 0; /* Move overlay to cover the item on hover */
-    opacity: 1; /* Make overlay fully visible on hover */
+    top: 0; 
+    opacity: 1; 
 }
 
 .GitHub {
@@ -359,12 +442,3 @@ position: static;
         font-size: clamp(12px, 3.5vw, 14px);
     }
 }
-
-
-
-
-
-
-
-
-
