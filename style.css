@@ -21,6 +21,7 @@ body {
     background-color: #1e1f26;
     text-align: center;
     padding: 0 2em;
+
 }
 
 .nav h1,
@@ -275,64 +276,33 @@ a {
 .divText p {
     line-height: 1.6; 
     text-align: justify;
+    
 }
 
-@media (max-width: 768px) {  
-    body {
-        font-size: 14px; 
-    }
-
-    .nav h1, .slider h1 {
-        font-size: 5vw;  
-    }
-
+@media (max-width: 800px) {  
     #container-aboutme, .item-aboutme {
-        padding: 20px;  
-        margin: 20px 10px; 
+        padding: 15px;
+        margin: 10px; /* Reduzierte Margin für schmalere Bildschirme */
     }
 
     .divTitle {
-        font-size: 1.2rem;  
+        font-size: clamp(18px, 4vw, 20px);
     }
 
     .divText p {
-        font-size: 1rem; 
-        line-height: 1.5; 
+        font-size: clamp(14px, 3vw, 16px);
+        line-height: 1.4; 
     }
 
     .nav-tab {
-        font-size: 4vw; 
-        padding: 15px 0; 
+        font-size: clamp(12px, 3.5vw, 14px);
+        padding: 10px 0;
     }
-}
-
-@media (max-width: 480px) { 
-    body {
-        font-size: 16px; 
+    .nav{
+        height: clamp( 10vw ,90vw, 100vw);
     }
 
-    .nav h1, .slider h1 {
-        font-size: 7vw;  
-    }
 
-    .item-aboutme {
-        padding: 15px;  
-        margin: 10px 5px;  
-    }
-
-    .divTitle {
-        font-size: 1.5rem; 
-    }
-
-    .divText p {
-        font-size: 1.1rem; 
-        line-height: 1.6; 
-    }
-
-    .nav-tab {
-        font-size: 5vw; 
-        padding: 20px 0; 
-    }
 }
 
 
