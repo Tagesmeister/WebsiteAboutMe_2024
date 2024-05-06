@@ -7,8 +7,13 @@ function projectStart(){
 }
 
 function prepareForProjects(){
+    console.log(document.getElementById('title')); // Check what this returns
     let title = document.getElementById('title');
-    title.innerHTML="FAVOURITE PROJECTS"
+    if (title) {
+        title.innerHTML = "FAVOURITE PROJECTS";
+    } else {
+        console.error('Title element not found');
+    }
     
     if(!document.getElementById('header')){
     createProjectHeader();

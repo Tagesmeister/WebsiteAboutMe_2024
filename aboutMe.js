@@ -9,23 +9,28 @@ function aboutMeStart(){
 }
 
 function prepareForAboutMe(){
-let title = document.getElementById('title');
-title.innerHTML="ABOUT ME";
+    console.log(document.getElementById('title')); // Überprüfen Sie, was dies zurückgibt
+    let title = document.getElementById('title');
+    if (title) {
+        title.innerHTML = "About Me"; // Setzen Sie den Titel auf "About Me"
+    } else {
+        console.error('Title element not found');
+    }
+    if (!document.getElementById('header-about-me')) {
+        createAboutMeHeader();
+    }
 
-if(!document.getElementById('header')){
-createAboutMeHeader();
+  
+    builAboutMeContent();
 }
 
-
-builAboutMeContent();
-}
 
 function createAboutMeHeader(){
     let section = document.getElementsByClassName('nav')[0];
     let mainTitle = document.getElementById('title')
     
     let header = document.createElement('header');
-    header.setAttribute('id','header');
+    header.setAttribute('id','header-about-me');
     
     header.appendChild(mainTitle)
     
@@ -78,6 +83,7 @@ function loadAboutMeContent(section, divs, contentDivs){
 
         createDivContent(divTitle, divText, i);
 
+
         element.appendChild(divTitle);
         element.appendChild(divText);
     
@@ -124,3 +130,8 @@ function GetTextEducation(){
         <p>C#, js, java, SQL, NoSQL, SQLight</p>
     `;
 }
+
+
+
+
+
