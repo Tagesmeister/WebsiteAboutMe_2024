@@ -53,7 +53,7 @@
 @media (max-width: 700px) { 
     #header {
 
-        margin-top: -10%; 
+        margin-top: -10%;
     }
     #title{
         margin-top: 5%;
@@ -82,8 +82,7 @@
         font-size: clamp(12px, 3.5vw, 14px);
         
     }
-    .nav,
-.slider {
-    height: 110vh;
+    .nav{
+    height: 120vh;
 }
 }

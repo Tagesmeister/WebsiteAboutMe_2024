@@ -106,4 +106,8 @@ position: static;
     .nav-tab {
         font-size: clamp(12px, 3.5vw, 14px);
     }
+    .nav{
+        margin-top: 20px;
+        height: 120vh;
+    }
 }
