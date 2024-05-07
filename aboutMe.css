@@ -53,7 +53,7 @@
 @media (max-width: 700px) { 
     #header {
 
-        margin-top: 3%;
+        margin-top: -10%; /* Moves the header up by 9% of the viewport height */
     }
     #title{
         margin-top: 5%;
@@ -61,9 +61,10 @@
         font-size: 150%;
     }
 
+    /* Additional styles for mobile responsiveness */
     #container-aboutme, .item-aboutme {
         padding: 10px;
-        margin: 10px; 
+        margin: 10px; /* Reduced margin for narrower screens */
     }
     #container-aboutme{
         margin-bottom: 80%;
@@ -71,15 +72,19 @@
     }
 
     .divTitle {
-        font-size: clamp(18px, 5vw, 20px); 
+        font-size: clamp(18px, 5vw, 20px); /* Responsive font size for smaller screens */
     }
 
     .divText p {
         font-size: clamp(14px, 3.5vw, 16px);
-        line-height: 1.4; 
+        line-height: 1.4; /* Adjust line height for better readability */
     }
     .nav-tab {
         font-size: clamp(12px, 3.5vw, 14px);
         
     }
+    .nav,
+.slider {
+    height: 110vh;
+}
 }
