@@ -10,8 +10,9 @@
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     color: white;
     font-size: clamp(12px, 2vw, 18px); 
-    max-width: 220px; 
-    min-height: 250px;
+    max-width: 500px; 
+    min-height: 300px;
+    min-width: 300px;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
@@ -42,7 +43,7 @@
 
 .item-project .overlay {
     position: absolute;
-    top: 100%; 
+    top: 100%; /* Initially set to hide the overlay */
     left: 0;
     right: 0;
     bottom: 0;
@@ -69,7 +70,7 @@
 }
 
 .item-project:hover .GitHub {
-    opacity: 1; 
+    opacity: 1; /* Make GitHub link visible on hover */
 }
 
 #header{
@@ -93,7 +94,8 @@ position: static;
 
 @media (max-width: 844px) { 
     .item-project {
-        width: 90vw; 
+        min-width: clamp(10vw, 65vw, 100vw);; 
+        min-height: clamp(10vw, 65vw, 100vw);
         font-size: clamp(14px, 4vw, 16px); 
         margin-bottom: 10vh;
     }
