@@ -1,4 +1,5 @@
 function projectStart(){
+    addProjectCss();
     let animation = document.getElementById('mainDiv');
     if (animation) {
         animation.remove();
@@ -6,8 +7,19 @@ function projectStart(){
     prepareForProjects();
 }
 
+function addProjectCss(){
+
+let link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = "project.css"; 
+
+document.head.appendChild(link);
+
+}
+
 function prepareForProjects(){
-    console.log(document.getElementById('title')); // Check what this returns
+    console.log(document.getElementById('title'));
     let title = document.getElementById('title');
     if (title) {
         title.innerHTML = "FAVOURITE PROJECTS";

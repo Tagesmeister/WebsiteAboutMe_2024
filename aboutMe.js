@@ -1,5 +1,5 @@
 function aboutMeStart(){
-
+    addAboutMCss()
     let animation = document.getElementById('mainDiv');
     if (animation) {
         animation.remove();
@@ -8,15 +8,24 @@ function aboutMeStart(){
     prepareForAboutMe( );
 }
 
+function addAboutMCss(){
+var link = document.createElement("link");
+link.rel = "stylesheet";
+link.type = "text/css";
+link.href = "aboutMe.css";
+
+document.head.appendChild(link);
+}
+
 function prepareForAboutMe(){
-    console.log(document.getElementById('title')); // Überprüfen Sie, was dies zurückgibt
+    console.log(document.getElementById('title'));
     let title = document.getElementById('title');
     if (title) {
-        title.innerHTML = "About Me"; // Setzen Sie den Titel auf "About Me"
+        title.innerHTML = "About Me"; 
     } else {
         console.error('Title element not found');
     }
-    if (!document.getElementById('header-about-me')) {
+    if (!document.getElementById('header')) {
         createAboutMeHeader();
     }
 
@@ -30,7 +39,7 @@ function createAboutMeHeader(){
     let mainTitle = document.getElementById('title')
     
     let header = document.createElement('header');
-    header.setAttribute('id','header-about-me');
+    header.setAttribute('id','header');
     
     header.appendChild(mainTitle)
     
@@ -115,6 +124,7 @@ function createDivContent(divTitle, divText, i) {
 function GetTextMeAsAPerson(){
     return `
         <p>Hello, I'm delighted that you've made it to my site. Here you can get a little insight into my personality and my favorite projects.</p>
+        <br>
         <p>My name is Pascal, I was born in 2004 and I live in beautiful Switzerland. My hobbies are sports, programming, and spending time with my closest friends.</p>
         <p>I do a lot of sports, especially jogging and going to the gym. From time to time, I enjoy the beautiful underwater world while diving.</p>
         <p>I like programming and often deal with the security of the digital world (cyber security). I am very open-minded and always happy to learn new things.</p>
@@ -130,8 +140,3 @@ function GetTextEducation(){
         <p>C#, js, java, SQL, NoSQL, SQLight</p>
     `;
 }
-
-
-
-
-
