@@ -1,5 +1,4 @@
 function aboutMeStart(){
-    addAboutMCss()
     let animation = document.getElementById('mainDiv');
     if (animation) {
         animation.remove();
@@ -8,20 +7,11 @@ function aboutMeStart(){
     prepareForAboutMe( );
 }
 
-function addAboutMCss(){
-var link = document.createElement("link");
-link.rel = "stylesheet";
-link.type = "text/css";
-link.href = "aboutMe.css";
-
-document.head.appendChild(link);
-}
-
 function prepareForAboutMe(){
     console.log(document.getElementById('title'));
     let title = document.getElementById('title');
     if (title) {
-        title.innerHTML = "About Me"; 
+        title.innerHTML = "About Me"; // Setzen Sie den Titel auf "About Me"
     } else {
         console.error('Title element not found');
     }
@@ -140,3 +130,8 @@ function GetTextEducation(){
         <p>C#, js, java, SQL, NoSQL, SQLight</p>
     `;
 }
+
+
+
+
+
