@@ -43,7 +43,7 @@
 
 .item-project .overlay {
     position: absolute;
-    top: 100%; /* Initially set to hide the overlay */
+    top: 100%; 
     left: 0;
     right: 0;
     bottom: 0;
@@ -70,7 +70,7 @@
 }
 
 .item-project:hover .GitHub {
-    opacity: 1; /* Make GitHub link visible on hover */
+    opacity: 1; 
 }
 
 #header{
