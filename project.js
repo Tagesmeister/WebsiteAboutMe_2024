@@ -95,7 +95,7 @@ function prepareForProjects(){
                 'Image/API2.png',
             ];
             const linkToRepo = [
-                "https://github.com/Tagesmeister/Portfolio_2024",
+                "https://github.com/Tagesmeister/WebsiteAboutMe_2024",
                 "https://github.com/Tagesmeister/LA_ILA2_1301_Schoologramm_2023",
                 "https://github.com/Tagesmeister/LA1304-BlackJack",
                 "https://github.com/Tagesmeister/API-Lernatelier-1303",
